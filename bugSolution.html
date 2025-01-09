@@ -1,0 +1,12 @@
+<p>The solution involves separating editable content from the form submission functionality.  Instead of making the entire form editable, we create individual editable elements (e.g., using <code>&lt;div contenteditable="true"&gt;</code>) to handle user input and then extract the values for form submission.</p><pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;div id="nameInput" contenteditable="true"&gt;&lt;/div&gt;
+  &lt;button type="submit" onclick="submitForm()"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+function submitForm() {
+  let name = document.getElementById('nameInput').textContent;
+  // ... process the name and submit the form ...
+}
+&lt;/script&gt;</code></pre>
